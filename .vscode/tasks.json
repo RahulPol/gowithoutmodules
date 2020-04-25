@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build and Run task",
+			"type": "shell",
+			"command": "set GOPATH=${workspaceFolder}&& go install project&& go run project",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Test task",
+			"type": "shell",
+			"command": "cd ${workspaceFolder}\\src\\project&& go test -v",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			}
+		}
+	]
+}
